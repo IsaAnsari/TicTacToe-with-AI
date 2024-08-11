@@ -1,0 +1,76 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.container {
+    text-align: center;
+}
+
+.home-screen, .game-screen, .result-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px; /* Add spacing between the boxes */
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 10px; /* Add border-radius to each box */
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.difficulty-button {
+    margin: 10px;
+}
+
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8px; /* Adjust spacing for smaller screens */
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5em;
+    }
+}
